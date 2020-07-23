@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 
 import './global.css';
+
+import NovaTarefa from '../img/new.png';
 
 export default function AddTodo() {
 
@@ -15,11 +18,22 @@ export default function AddTodo() {
     return (
 
         <div className="container">
+            <section>
+
+                <img src={NovaTarefa} alt="Nova Tarefa" />
+                <h1>Cadastro</h1>
+                <p>Realize aqui, o cadastro da sua nova tarefa. Caso preferir, cadastre também, um novo marcador</p>
+                <Link to='/' className="back-link">
+                    <FiArrowLeft size={16} color="#e02041" />
+                    Voltar
+                </Link>
+                
+            </section>
             <div className="container-form">
 
                 <form onSubmit={handleAddTodo}>
 
-                    <h2>Adicionar</h2>
+
                     <div className='form-group'>
 
                         <div class="col-sm-5">
@@ -62,7 +76,7 @@ export default function AddTodo() {
                             <label>Cadastrar novo marcador: </label>
                             <input className="form-control"></input>
                         </div>
-                       
+
                     </div>
 
                     {/* <img src="/img/checklist.png" class="rounded mx-auto d-block"></img> */}
@@ -72,10 +86,7 @@ export default function AddTodo() {
                         <button type='reset' className='btn btn-outline-primary mr-2'>Limpar</button>
                         <button type="submit" className='btn btn-outline-danger mr-2'>Cadastrar</button>
 
-                        <Link to='/' className='btn btn-outline-primary mr-2'>
 
-                            Voltar
-                        </Link>
 
                         {/* <button type='button' className='btn btn-outline-primary mr-2'>Voltar</button> */}
                         {/* mr-2 da espaço entre os botoes */}
