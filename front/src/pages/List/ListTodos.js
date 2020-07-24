@@ -7,7 +7,7 @@ import { FcEmptyFilter } from 'react-icons/fc';
 
 import './StylesListTodo.css';
 
-import ImagemTarefa from '../img/checklist.png';
+import ImagemTarefa from '../../img/checklist.png';
 
 // arrow functions
 const ListTodos = () => {
@@ -21,6 +21,7 @@ const ListTodos = () => {
             <div className="container-check">
 
                 <header>
+
 
                     <img src={ImagemTarefa} alt="Imagem de tarefa" />
                     <Link to='/add' className="button">Cadastrar</Link>

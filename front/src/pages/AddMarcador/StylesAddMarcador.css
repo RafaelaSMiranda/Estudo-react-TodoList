@@ -1,0 +1,63 @@
+.marcador-container{
+
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marcador-container h1{
+    margin-right: 20px;
+    margin: 30px 0 32px;
+    color: rgb(48, 3, 3);
+    font-size: 32px;
+}
+
+.marcador-container .content{
+  
+    width: 50%;
+    padding: 10px;
+    /* importante */
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+ 
+}
+
+.marcador-container form {
+
+    width: 100%;
+    max-width: 520px; 
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.marcador-container form input{
+    
+    margin: 8px 10px 8px 10px;
+}
+
+.marcador-container .content .content-button{
+    
+    display: flex;
+  
+}
+
+.marcador-container .content .content-button button{
+    margin: 40px 50px 10px 50px;
+  
+    /*  sentido horário, começamento com o lado superior */
+}
+
+.marcador-container .content link{
+    margin-bottom: 20px;
+}
+ 
+
