@@ -30,7 +30,7 @@
  
 }
 
-.marcador-container form {
+.marcador-container .form_div {
 
     width: 100%;
     max-width: 520px; 
@@ -39,7 +39,7 @@
     
 }
 
-.marcador-container form input{
+.marcador-container .form_div input{
     
     margin: 8px 10px 8px 10px;
 }

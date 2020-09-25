@@ -1,5 +1,6 @@
 // express js
 const express = require('express');
+const cors = require('cors');
 
 // routes -> REST
 // GET
@@ -20,7 +21,7 @@ const routes = require('./routes');
 // request param
 // www.site.com/produto/10
 
-
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 

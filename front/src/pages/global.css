@@ -12,7 +12,8 @@ body{
 }
 
 input, button, textarea, text{
-    font: 400 18px;
+    font: 700 18px ;
+    color: black;
 }
 
 button{
@@ -21,18 +22,24 @@ button{
 
 input{
     width: 100%;
-    height: 40px;
-    color: #3333;
+    height: 50px;
     border: 1px solid #dcdce6;
     border-radius: 8px;
-    padding: 0 24px;
+    margin-right: 5px;
+}
+
+select {
+    width: 50%;
+    height: 50px;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    margin-right: 5px;
 }
 
 textarea{
     width: 100%;
     min-height: 140px;
     height: 20px;
-    color: #3333;
     border: 1px solid #dcdce6;
     border-radius: 8px;
     padding: 16px 24px;
