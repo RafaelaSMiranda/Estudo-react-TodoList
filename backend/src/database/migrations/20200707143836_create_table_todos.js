@@ -8,7 +8,7 @@ exports.up = function(knex) {
         table.integer('priority').notNullable().defaultTo(0);
         table.boolean('completed').notNullable().defaultTo(false);
         table.string('marcador_name').notNullable().defaultTo('Tarefa');
-
+        // precisa da combinação dos dois, notNullable e defaultTo
 
         table.foreign('marcador_name').references('name').inTable('marcadores');
 

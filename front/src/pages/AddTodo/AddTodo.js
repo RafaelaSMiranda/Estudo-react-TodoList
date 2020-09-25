@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
@@ -6,15 +6,43 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import './StylesAddTodo.css';
 
 import NovaTarefa from '../../img/new.png';
+import api from '../../services/api';
 
 export default function AddTodo() {
 
+    const [name, setName] = useState();
+    const [priority, setPriority] = useState();
+    const [marcador_name, setMarcador_name] = useState();
 
-    // function handleAddTodo(event) {
+    async function handleAddTodo(event) {
 
-    //     event.preventDefault();
+        event.preventDefault();
 
-    // }
+
+        const data = {
+            name,
+            priority,
+            marcador_name
+        }
+
+
+        try {
+
+            await api.post('todos', data)
+                .then(response =>
+                    alert('Lista de tarefas adicionada com sucesso!')
+                  
+
+                )
+
+
+
+
+        } catch (err) {
+            alert('Erro ao realizar cadastro da lista de tarefas')
+        }
+
+    }
 
     return (
 
@@ -36,20 +64,35 @@ export default function AddTodo() {
 
                 </section>
 
-                <form>
+                <form onSubmit={handleAddTodo} >
 
                     <div className='form-group'>
 
 
-                        <textarea placeholder="Descrição da tarefa" />
-                        <input type="text" placeholder="Prioridade" />
-                        <input placeholder="Marcador" />
+                        <textarea
+                            placeholder="Descrição da tarefa"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                        />
+
+                        <input
+                            type="text"
+                            placeholder="Prioridade"
+                            value={priority}
+                            onChange={e => setPriority(e.target.value)}
+                        />
+
+                        <input
+                            placeholder="Marcador"
+                            value={marcador_name}
+                            onChange={e => setMarcador_name(e.target.value)}
+                        />
 
                     </div>
 
                     <div className='form-button'>
 
-                        <button type='reset' className="button">Limpar</button>
+                        <button type="reset"  className="button">Limpar</button>
                         <button type="submit" className="button">Cadastrar</button>
 
                     </div>

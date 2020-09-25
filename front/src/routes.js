@@ -8,8 +8,9 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 import ListTodo from './pages/List/ListTodos';
 import AddTodo from './pages/AddTodo/AddTodo';
-import UpdateTodo from './pages/UpdateTodo';
+// import UpdateTodo from './pages/UpdateTodo/UpdateTodo';
 import AddMarcador from './pages/AddMarcador/AddMarcador';
+import FiltroList from './pages/FiltroList/Filtro';
 
 
 export default function Routes(){
@@ -20,8 +21,9 @@ export default function Routes(){
         
         <Route path='/' exact component={ListTodo}/>
         <Route path='/add' exact component={AddTodo}/>
-        <Route path='/update/:id' component={UpdateTodo}/>
+        {/* <Route path='/update/:id' component={UpdateTodo}/> */}
         <Route path='/addMarcador' component={AddMarcador}/>
+        <Route path='/filtroList' component={FiltroList}/>
 
         </BrowserRouter>
 

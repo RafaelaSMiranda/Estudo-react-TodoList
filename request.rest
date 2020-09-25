@@ -1,0 +1,26 @@
+get http://localhost:3333/todos
+
+###
+
+put http://localhost:3333/todos/2
+Content-Type: application/json
+
+{
+    "name": "Vincular back-end ao front-end",
+    "priority": 1
+}
+
+###
+
+GET http://localhost:3333/todos/2 HTTP/1.1
+
+###
+
+DELETE http://localhost:3333/todos/2
+
+###
+
+POST url HTTP/1.1
+header name: header value
+
+content
